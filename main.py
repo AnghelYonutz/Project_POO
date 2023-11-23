@@ -16,10 +16,21 @@ class Animal:
         else:
             return False
 
-a = Animal("Vulpe", "eucariota", "animalia", "chordata", "mammalia", "canidae")
+a = Animal("Vulpea", "eucariota", "animalia", "chordata", "mammalia", "canidae")
 b = Animal("Ursul brun", "eucarioata", "animalia", "chordata", "mammalia", "ursidae")
 c = Animal("Lupul", "eucariota", "animalia", "chordata", "mammalia", "canidae")
-d = Animal("Cerb", "eucariota", "animalia", "chordata", "mammalia", "cervidae")
+d = Animal("Cerbul", "eucariota", "animalia", "chordata", "mammalia", "cervidae")
+
+class Car(Animal):
+    def __init__(self, animal, rasa, marime, culoare):
+        self.sanimal = animal
+        self.rasa = rasa
+        self.marime = marime
+        self.culoare = culoare
+        super().__init__(animal)
+    def __str__(self):
+        return "Acesta este un/o {self.sanimal} de {self.rasa}, marime {self.marime}, de culoare {self.culoare}.".format(self=self)
+
 
 print(a)
 print(b)
@@ -32,6 +43,11 @@ print(c == a)
 print(d == a)
 print(d == b)
 print(d == c)
+
+
+
+
+
 
 
 
